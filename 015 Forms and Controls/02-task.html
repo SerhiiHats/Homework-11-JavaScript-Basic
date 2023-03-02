@@ -51,7 +51,7 @@
 
         <div class="form-group">
             <label for="price">Цена</label>
-            <input type="text" id="price" name="price">
+            <input type="number" id="price" name="price">
         </div>
 
         <div class="form-group">
@@ -61,8 +61,8 @@
 
         <div class="form-group">
             <label for="price">Валюта</label>
-            <input type="radio" id="currency" name="currency" value="USD" checked> USD
-            <input type="radio" id="currency" name="currency" value="EUR"> EUR
+            <input type="radio" id="currencyUSD" name="currency" value="USD" checked> USD
+            <input type="radio" id="currencyEUR" name="currency" value="EUR"> EUR
         </div>
         <br>
         <input id="saveButton" type="button" value="Сохранить">
@@ -90,7 +90,7 @@
 
             for (let i = 0; i < productForm.elements.length; i++) {
                 const element = productForm.elements[i];
-                if (element.type == "text" || element.type == "number") element.value = "";
+                if (element.type === "text" || element.type === "number") element.value = "";
             }
         });
 
